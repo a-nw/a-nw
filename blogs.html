@@ -3,26 +3,74 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ASWCode | Black & White Block Digital Clock</title>
+  <title>ASWCode | Blogs</title>
 
-  <meta name="description" content="Download the Black & White Block Digital Clock project from ASWCode. A stylish digital clock made with HTML, CSS, and JavaScript featuring a clean black-and-white block design.">
-  <meta name="keywords" content="Black White Block Digital Clock, digital clock, HTML CSS JS projects, responsive clock, ASWCode download, frontend projects, black white clock">
+  <!-- ===== SEO Meta Tags ===== -->
+  <meta name="description" content="Read ASWCode blogs to learn web development, coding techniques, and project ideas in HTML, CSS, and JavaScript. Stay inspired and improve your frontend skills.">
+  <meta name="keywords" content="ASWCode blogs, web development blogs, coding tutorials, frontend projects, HTML, CSS, JavaScript learning, ASWCode articles">
   <meta name="author" content="Achini Wanasinghe">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://aswcode.com/blogs.html" />
 
-  <meta property="og:title" content="ASWCode | Black & White Block Digital Clock">
-  <meta property="og:description" content="A responsive digital clock built using HTML, CSS, and JavaScript. Download the Black & White Block Digital Clock free from ASWCode.">
-  <meta property="og:image" content="https://aswcode.com/preview.png">
+  <!-- ===== Open Graph / Social Sharing ===== -->
+  <meta property="og:title" content="ASWCode | Blogs">
+  <meta property="og:description" content="Explore the latest ASWCode blogs featuring tutorials, project breakdowns, and coding insights for HTML, CSS, and JavaScript learners.">
   <meta property="og:type" content="website">
+  <meta property="og:url" content="https://aswcode.com/blogs.html">
+  <meta property="og:image" content="https://aswcode.com/preview.png">
+  <meta property="og:site_name" content="ASWCode">
 
+  <!-- ===== Twitter Card ===== -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ASWCode | Blogs">
+  <meta name="twitter:description" content="Learn frontend development with ASWCode blogs — from HTML basics to JavaScript projects and design inspiration.">
+  <meta name="twitter:image" content="https://aswcode.com/preview.png">
+
+  <!-- ===== JSON-LD Structured Data (Blog & Breadcrumbs) ===== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "ASWCode Blog",
+    "url": "https://aswcode.com/blogs.html",
+    "description": "ASWCode blog provides educational content, coding tutorials, and creative web development ideas in HTML, CSS, and JavaScript.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "ASWCode",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://aswcode.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.facebook.com/aswcode",
+        "https://www.youtube.com/@aswcode",
+        "https://www.instagram.com/aswcode"
+      ]
+    },
+    "author": {
+      "@type": "Person",
+      "name": "Achini Wanasinghe"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://aswcode.com/blogs.html"
+    }
+  }
+  </script>
+
+  <!-- ===== Google Analytics 4 ===== -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-M22GBBYSJE"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-M22GBBYSJE');
-</script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-M22GBBYSJE', {
+      page_path: window.location.pathname,
+    });
+  </script>
 
   <style>
+    /* ===== Base ===== */
     body {
       margin: 0;
       font-family: 'Poppins', sans-serif;
@@ -31,6 +79,7 @@
       overflow-x: hidden;
     }
 
+    /* ---------- NAVBAR ---------- */
     header {
       background: #1a1a1a;
       position: fixed;
@@ -90,6 +139,7 @@
       color: #00eaff;
     }
 
+    /* ===== Blog Section ===== */
     .content {
       display: flex;
       flex-direction: column;
@@ -100,7 +150,6 @@
       padding: 50px 20px;
       background: radial-gradient(circle at top, #0a0a0a, #000);
     }
-
     .content h1 {
       font-size: 2.4em;
       color: #00eaff;
@@ -108,7 +157,7 @@
       margin-top: 100px;
     }
 
-    .project-card {
+    .blog-box {
       max-width: 800px;
       background: rgba(15, 15, 15, 0.8);
       padding: 40px;
@@ -119,62 +168,38 @@
       color: #ddd;
       font-size: 1.05em;
       backdrop-filter: blur(10px);
+      margin-bottom: 30px;
       animation: glowPulse 3s infinite alternate ease-in-out;
     }
 
-    .project-card img {
-      width: 100%;
-      border-radius: 12px;
-      border: 0.9px solid #00ffff00;
-    }
-
-    .project-card h2 { color: #00eaff; }
-
-    .button-group {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 15px;
-      margin-top: 20px;
-    }
-
-    .btn {
-      background: linear-gradient(90deg, #00eaff, #00bcd4);
-      color: #000;
-      text-decoration: none;
-      padding: 12px 25px;
-      border-radius: 30px;
-      font-weight: 600;
-      transition: all 0.3s ease;
-      display: inline-block;
-    }
-
-    .btn:hover { transform: scale(1.05); box-shadow: 0 0 15px #00eaff; }
-
-    .live-btn {
-      background: transparent;
-      border: 2px solid #00eaff;
+    .blog-box h2 {
       color: #00eaff;
+      font-size: 1.5em;
+      margin-bottom: 10px;
     }
 
-    .live-btn:hover {
+    .blog-box p {
+      margin-bottom: 15px;
+      color: #ccc;
+    }
+
+    .blog-box button {
       background: #00eaff;
+      border: none;
       color: #000;
-      box-shadow: 0 0 20px #00eaff;
+      font-weight: 600;
+      padding: 10px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
     }
 
-    .note { font-size: 13px; color: #aaa; margin-top: 15px; }
-
-    /* ---------- FLOATING BACK BUTTON ---------- */
-    .floating-back {
-      position:fixed; bottom:20px; right:20px; 
-      background:#00eaff; color:#000; font-weight:bold; 
-      padding:12px 18px; border-radius:30px; 
-      text-decoration:none; box-shadow:0 0 15px rgba(0,234,255,0.5); 
-      transition:0.3s; z-index:200; 
+    .blog-box button:hover {
+      background: #00bcd4;
+      box-shadow: 0 0 15px #00eaff;
     }
-    .floating-back:hover { background:#00a8cc; color:#fff; box-shadow:0 0 25px #00eaff; transform:scale(1.1); }
 
+    /* ---------- FOOTER ---------- */
     footer {
       background: #000;
       padding: 50px 20px 30px;
@@ -188,11 +213,13 @@
       font-size: 0.9em;
     }
 
+    /* ===== Animations ===== */
     @keyframes glowPulse {
       from { box-shadow: 0 0 20px rgba(0, 234, 255, 0.2); }
       to { box-shadow: 0 0 40px rgba(0, 234, 255, 0.6); }
     }
 
+    /* ===== Responsive ===== */
     @media (max-width: 768px) {
       .navbar { padding: 15px 20px; }
       .menu-toggle { display: block; }
@@ -214,59 +241,58 @@
       }
       .nav-links.active { display: flex; }
       .nav-links li { margin: 15px 0; }
-      .btn { font-size: 0.8rem; }
-      .content h1 { font-size: 1.6em; }
     }
-  
   </style>
 </head>
 <body>
+  <!-- ---------- HEADER ---------- -->
   <header>
     <nav class="navbar">
       <a href="index.html" class="logo">ASWCode</a>
-      <div class="menu-toggle" id="menu-toggle">&#9776;</div>
       <ul class="nav-links" id="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="snippets.html">Snippets</a></li>
-        <li><a href="projects.html" class="active">Projects</a></li>
-        <li><a href="blogs.html">Blogs</a></li>
-        <li><a href="about.html" >About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="blogs.html" class="active">Blogs</a></li>
+        <li><a href="about.html">About</a></li>
         <li><a href="privacy.html">Privacy Policy</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
+      <div class="menu-toggle" id="menu-toggle">&#9776;</div>
     </nav>
   </header>
 
-
+  <!-- ===== BLOG CONTENT ===== -->
   <section class="content">
-    <h1>HTML, CSS and JavaScript Project – Black & White Block Digital Clock</h1>
-    <div class="project-card">
-      <img src="project-images/black-white-block-digital-clock-preview.JPG" alt="Black & White Block Digital Clock Preview">
-      <h2>Black & White Block Digital Clock</h2>
-      <p>A responsive digital clock built using HTML, CSS, and JavaScript with a black-and-white block design for hours, minutes, and seconds. Works on both desktop and mobile devices.</p>
+    <h1>ASWCode Blogs</h1>
 
-      <div class="button-group">
-        <a href="black-white-block-digital-clock.html" target="_blank" class="btn live-btn">Live Demo</a>
-        <a href="downloads/black-white-block-digital-clock.zip" download class="btn">Download Project (ZIP)</a>
-      </div>
+    <div class="blog-box">
+      <h2>How to Earn Money Online: Beginner’s Complete Guide</h2>
+      <p>Learn step-by-step how to start earning money online through freelancing, digital products, content creation, and affiliate marketing. Discover safe platforms and build a sustainable income.</p>
+      <button onclick="window.location.href='blog-earn-online.html'">Read More</button>
+    </div>
+
+    <div class="blog-box">
+      <h2>How to Avoid Online Earning Scams and Stay Safe: The Complete Guide</h2>
+      <p>Protect yourself from online fraud and fake earning platforms. Learn how to identify scams, secure your information, and earn safely online.</p>
+      <button onclick="window.location.href='blog-online-safety.html'">Read More</button>
     </div>
   </section>
 
+  <!-- ---------- FOOTER ---------- -->
   <footer>
     <div class="footer-bottom">
       <p>© 2025 ASWCode. All rights reserved.</p>
     </div>
   </footer>
 
-  <a href="projects.html" class="floating-back">&larr; Back to Projects</a>
-
   <script>
     const menuToggle = document.getElementById('menu-toggle');
     const navLinks = document.getElementById('nav-links');
 
-    menuToggle.addEventListener('click', () => { navLinks.classList.toggle('active'); });
+    menuToggle.addEventListener('click', () => navLinks.classList.toggle('active'));
     document.querySelectorAll('.nav-links a').forEach(link => {
-      link.addEventListener('click', () => { navLinks.classList.remove('active'); });
+      link.addEventListener('click', () => navLinks.classList.remove('active'));
     });
     document.addEventListener('click', (e) => {
       if (!navLinks.contains(e.target) && !menuToggle.contains(e.target)) {
