@@ -4,16 +4,16 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>ASWCode | Projects List</title>
+<title>ASWCode | HTML, CSS & JavaScript Projects</title>
 
 <!-- SEO Meta Tags -->
-<meta name="description" content="Explore frontend projects with source code and live demos on ASWCode. Learn HTML, CSS, and JavaScript through real projects.">
-<meta name="keywords" content="HTML projects, CSS projects, JavaScript projects, frontend projects, web development projects, code examples, ASWCode">
+<meta name="description" content="Explore the best frontend projects with source code and live demos on ASWCode. Learn HTML, CSS, and JavaScript by building real projects.">
+<meta name="keywords" content="HTML projects, CSS projects, JavaScript projects, frontend projects, web development projects, code examples, ASWCode, tutorials, mini projects">
 <meta name="author" content="Achini Saumya">
 
 <!-- Open Graph / Social Sharing -->
 <meta property="og:title" content="ASWCode | Projects List">
-<meta property="og:description" content="Explore frontend projects with source code and live demos on ASWCode.">
+<meta property="og:description" content="Explore the best frontend projects with source code and live demos on ASWCode.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://aswcode.com/projects.html">
 <meta property="og:image" content="https://aswcode.com/preview.png">
@@ -24,31 +24,50 @@
 <meta name="twitter:description" content="Explore frontend projects with source code and live demos on ASWCode.">
 <meta name="twitter:image" content="https://aswcode.com/preview.png">
 
-<!-- JSON-LD Structured Data -->
+<!-- JSON-LD Structured Data for Projects -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "WebPage",
+  "@type": "ItemList",
   "name": "ASWCode Projects List",
   "url": "https://aswcode.com/projects.html",
   "description": "A curated list of frontend projects with source code and live demos.",
-  "publisher": {
-    "@type": "Organization",
-    "name": "ASWCode",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://aswcode.com/logo.png"
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "url": "https://aswcode.com/html-css-javascript-3d-calculator.html",
+      "name": "3D Press Button Calculator"
     },
-    "sameAs": [
-      "https://www.facebook.com/aswcode",
-      "https://www.youtube.com/@aswcode",
-      "https://www.instagram.com/aswcode"
-    ],
-    "founder": "Achini Saumya",
-    "foundingDate": "2025"
-  }
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "url": "https://aswcode.com/html-css-javascript-aquaglow-calculator.html",
+      "name": "AquaGlow Calculator"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "url": "https://aswcode.com/html-css-javascript-neonglow-digital-clock.html",
+      "name": "NeonGlow Digital Clock"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "url": "https://aswcode.com/html-css-javascript-pastel-block-digital-clock.html",
+      "name": "Pastel Block Digital Clock"
+    },
+    {
+      "@type": "ListItem",
+      "position": 5,
+      "url": "https://aswcode.com/html-css-javascript-black-white-block-digital-clock.html",
+      "name": "Black & White Block Digital Clock"
+    }
+  ]
 }
 </script>
+
+
 
 <!-- Google Analytics 4 -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-M22GBBYSJE"></script>
@@ -59,6 +78,8 @@
 
   gtag('config', 'G-M22GBBYSJE');
 </script>
+
+
 
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
@@ -158,113 +179,47 @@ header {
   line-height: 1.6;
 }
 
-/* ---------- SEARCH BAR ---------- */
-.search-container {
-  text-align: center;
-  margin-bottom: 20px;
-}
-.search-container input {
-  width: 80%;
-  max-width: 400px;
-  padding: 10px 15px;
-  font-size: 1rem;
-  border-radius: 30px;
-  border: 1px solid #00eaff;
-  outline: none;
-  background: #1a1a1a;
-  color: #fff;
-  transition: 0.3s;
-  box-shadow: 0 0 8px rgba(0,234,255,0.2);
-}
-.search-container input:focus {
-  background: #111;
-  box-shadow: 0 0 15px #00eaff, 0 0 30px rgba(0,234,255,0.5);
-}
-
-/* ---------- PROJECT LIST ---------- */
+/* ---------- PROJECT CARDS ---------- */
 .project-list {
-  max-width: 650px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
   margin: 40px auto 80px;
   padding: 0 20px;
 }
-.project-list ol {
-  counter-reset: project;
-  list-style: none;
-  padding-left: 0;
-}
-.project-list li {
-  counter-increment: project;
-  display: flex;
-  align-items: center;
-  margin-bottom: 15px;
-}
-.project-list li::before {
-  content: counter(project);
-  font-weight: 700;
-  font-size: 1.2rem;
-  color: #00eaff;
-  margin-right: 15px;
-  min-width: 25px;
-  text-align: center;
-}
-.project-list a {
-  display: block;
+.project-card {
+  position: relative;
   background: rgba(15, 15, 15, 0.85);
-  padding: 12px 20px;
-  border-radius: 10px;
-  color: #00eaff;
-  text-decoration: none;
-  width: 100%;
-  transition: 0.4s;
-  box-shadow: 0 4px 10px rgba(0,234,255,0.1);
-  position: relative;
+  border-radius: 15px;
   overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,234,255,0.1);
+  transition: transform 0.4s, box-shadow 0.4s;
+  text-decoration: none; /* remove underline from entire card */
+  margin: 20px;
 }
-.project-list a::before {
-  content: '';
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: #00eaff;
-  background-size: 400% 400%;
-  z-index: 0;
-  transition: opacity 0.4s;
-  opacity: 0;
-  filter: blur(15px);
-  animation: gradientGlow 6s linear infinite;
+.project-card img {
+  width: 100%;
+  display: block;
+  border-bottom: 1px solid #00eaff00;
+  transition: transform 0.4s;
 }
-.project-list a span {
-  position: relative;
-  z-index: 1;
+.project-card h3 {
+  margin: 12px;
+  font-size: 1.1rem;
+  color: #00eaff;
+  text-align: center;
+  text-decoration: none; /* remove underline from project name */
 }
-.project-list a:hover::before {
-  opacity: 0.25;
-}
-.project-list a:hover {
-  color: #fff;
-  transform: translateX(5px) scale(1.03);
+.project-card:hover {
+  transform: translateY(-5px) scale(1.03);
   box-shadow: 0 8px 20px rgba(0,234,255,0.4), 0 0 15px rgba(0,234,255,0.3);
 }
-@keyframes gradientGlow {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+.project-card:hover img {
+  transform: scale(1.05);
 }
 
-/* ---------- AD SLOT ---------- */
-.ad-slot {
-  background: rgba(20, 20, 20, 0.85);
-  border-radius: 10px;
-  padding: 15px;
-  text-align: center;
-  margin: 20px 0;
-  color: #888;
-  font-size: 0.9rem;
-}   
-
-/* ---------- BACK TO TOP BUTTON   ---------- */
+/* ---------- BACK TO TOP BUTTON ---------- */
 #backToTop {
   position: fixed;
   bottom: 30px;
@@ -285,43 +240,39 @@ header {
   transform: scale(1.2);
   box-shadow: 0 6px 15px rgba(0,234,255,0.5), 0 0 20px #00eaff;
 }
-#backToTop.show { opacity: 1; } 
+#backToTop.show { opacity: 1; }
 
 /* ===== Responsive ===== */
-    @media (max-width: 768px) {
-      .navbar {
-        padding: 15px 20px;
-      }
-
-      /* Show menu toggle */
-      .menu-toggle {
-        display: block;
-      }
-
-      /* Mobile menu centered */
-      .nav-links {
-        display: none; /* hidden by default */
-        flex-direction: column;
-        position: fixed;
-        top: 50%;       /* vertical center */
-        left: 50%;      /* horizontal center */
-        transform: translate(-50%, -50%);
-        background: rgb(10, 10, 10);
-        border-radius: 15px;
-        padding: 30px 20px;
-        width: 80%;
-        max-width: 300px;
-        align-items: center;
-        box-shadow: 0 0 15px rgba(0, 234, 255, 0.4);
-        z-index: 999;
-      }
-      .nav-links.active {
-        display: flex;
-      }
-      .nav-links li {
-        margin: 15px 0;
-      }
-    }
+@media (max-width: 768px) {
+  .navbar {
+    padding: 15px 20px;
+  }
+  .menu-toggle {
+    display: block;
+  }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgb(10, 10, 10);
+    border-radius: 15px;
+    padding: 30px 20px;
+    width: 80%;
+    max-width: 300px;
+    align-items: center;
+    box-shadow: 0 0 15px rgba(0, 234, 255, 0.4);
+    z-index: 999;
+  }
+  .nav-links.active {
+    display: flex;
+  }
+  .nav-links li {
+    margin: 15px 0;
+  }
+}
 </style>
 </head>
 <body>
@@ -345,25 +296,35 @@ header {
 <section class="project-hero">
   <h1>HTML, CSS, and JavaScript Projects</h1>
   <p>Explore frontend projects with source code and live demos on ASWCode.</p>
-
- <!-- <div class="search-container">
-    <input type="text" id="searchInput" placeholder="Search projects (e.g. portfolio, e-commerce, game)...">
-  </div> -->
 </section>
 
 <section class="project-list" id="projectList">
 
-  <!-- <div class="ad-slot">Ad Placeholder (Top)</div> -->
+  <a href="html-css-javascript-3d-calculator.html" class="project-card">
+    <img src="project-images//3d-press-button-calculator-preview.JPG" alt="3D Press Button Calculator">
+    <h3>3D Press Button Calculator</h3>
+  </a>
 
-  <ol>
-    <li><a href="html-css-javascript-3d-calculator.html"><span>3D Press Button Calculator</span></a></li>
-    <li><a href="html-css-javascript-aquaglow-calculator.html"><span>AquaGlow Calculator</span></a></li>
-    <li><a href="html-css-javascript-neonglow-digital-clock.html"><span>NeonGlow Digital Clock</span></a></li>
-    <li><a href="html-css-javascript-pastel-block-digital-clock.html"><span>Pastel Block Digital Clock</span></a></li>
-    <li><a href="html-css-javascript-black-white-block-digital-clock.html"><span>Black & White Block Digital Clock</span></a></li>
-    
-    <!-- <div class="ad-slot">Ad Placeholder</div> -->
-  </ol>
+  <a href="html-css-javascript-aquaglow-calculator.html" class="project-card">
+    <img src="project-images/aquaglow-calculator-preview.JPG" alt="AquaGlow Calculator">
+    <h3>AquaGlow Calculator</h3>
+  </a>
+
+  <a href="html-css-javascript-neonglow-digital-clock.html" class="project-card">
+    <img src="project-images/NeonGlow-Clock.JPG" alt="NeonGlow Digital Clock">
+    <h3>NeonGlow Digital Clock</h3>
+  </a>
+
+  <a href="html-css-javascript-pastel-block-digital-clock.html" class="project-card">
+    <img src="project-images/pastel-block-digital-clock-preview.JPG" alt="Pastel Block Digital Clock">
+    <h3>Pastel Block Digital Clock</h3>
+  </a>
+
+  <a href="html-css-javascript-black-white-block-digital-clock.html" class="project-card">
+    <img src="project-images/black-white-block-digital-clock-preview.JPG" alt="Black & White Block Digital Clock">
+    <h3>Black & White Block Digital Clock</h3>
+  </a>
+
 </section>
 
 <button id="backToTop" title="Back to Top">
@@ -374,38 +335,22 @@ header {
 const menuToggle = document.getElementById('menu-toggle');
 const navLinks = document.getElementById('nav-links');
 
-    menuToggle.addEventListener('click', () => {
-      navLinks.classList.toggle('active');
-    });
+menuToggle.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+});
 
-    // Close menu when a link is clicked
-    document.querySelectorAll('.nav-links a').forEach(link => {
-      link.addEventListener('click', () => {
-        navLinks.classList.remove('active');
-      });
-    });
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', () => {
+    navLinks.classList.remove('active');
+  });
+});
 
-    document.addEventListener('click', (e) => {
+document.addEventListener('click', (e) => {
   if (!navLinks.contains(e.target) && !menuToggle.contains(e.target)) {
     navLinks.classList.remove('active');
   }
 });
 
-
-// Search filter logic
-const searchInput = document.getElementById('searchInput');
-const projectList = document.getElementById('projectList');
-const items = projectList.getElementsByTagName('li');
-
-searchInput.addEventListener('keyup', function() {
-  const filter = this.value.toLowerCase().trim();
-  for (let i = 0; i < items.length; i++) {
-    const text = items[i].innerText.toLowerCase();
-    items[i].style.display = text.includes(filter) ? 'flex' : 'none';
-  }
-});
-
-// Back to Top button
 const backToTop = document.getElementById('backToTop');
 window.addEventListener('scroll', () => {
   if (window.scrollY > 300) {

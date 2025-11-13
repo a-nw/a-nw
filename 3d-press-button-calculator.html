@@ -88,6 +88,11 @@
       color: #fff;
     }
 
+    .delete {
+      background: linear-gradient(145deg, #f6d365, #fda085);
+      color: #fff;
+    }
+
     .zero {
       grid-column: span 2;
       background: linear-gradient(145deg, #ffd194, #d1913c);
@@ -115,23 +120,24 @@
     <input type="text" id="result" readonly placeholder="0">
     <div class="buttons">
       <button class="clear" onclick="clearResult()">C</button>
+      <button class="delete" onclick="deleteLast()">⌫</button>
       <button class="operator" onclick="appendValue('/')">/</button>
       <button class="operator" onclick="appendValue('*')">*</button>
-      <button class="operator" onclick="appendValue('-')">-</button>
 
       <button class="number" onclick="appendValue('7')">7</button>
       <button class="number" onclick="appendValue('8')">8</button>
       <button class="number" onclick="appendValue('9')">9</button>
-      <button class="operator" onclick="appendValue('+')">+</button>
+      <button class="operator" onclick="appendValue('-')">-</button>
 
       <button class="number" onclick="appendValue('4')">4</button>
       <button class="number" onclick="appendValue('5')">5</button>
       <button class="number" onclick="appendValue('6')">6</button>
-      <button class="equal" onclick="calculateResult()">=</button>
+      <button class="operator" onclick="appendValue('+')">+</button>
 
       <button class="number" onclick="appendValue('1')">1</button>
       <button class="number" onclick="appendValue('2')">2</button>
       <button class="number" onclick="appendValue('3')">3</button>
+      <button class="operator equal" onclick="calculateResult()">=</button>
 
       <button class="zero" onclick="appendValue('0')">0</button>
       <button class="number" onclick="appendValue('.')">.</button>
@@ -149,6 +155,11 @@
     function clearResult() {
       expression = '';
       document.getElementById('result').value = '';
+    }
+
+    function deleteLast() {
+      expression = expression.slice(0, -1);
+      document.getElementById('result').value = expression;
     }
 
     function calculateResult() {
