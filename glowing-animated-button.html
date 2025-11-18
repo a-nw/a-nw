@@ -74,49 +74,6 @@
   text-shadow: 0 0 10px #00eaff, 0 0 30px #00eaff;
 }
 
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-}
-
-.nav-links a {
-  color: #fff;
-  font-weight: 500;
-  transition: 0.3s;
-  text-decoration: none;
-  position: relative;
-}
-
-.nav-links a::after {
-  content: "";
-  position: absolute;
-  bottom: -4px;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: #00eaff;
-  transition: 0.3s;
-  box-shadow: 0 0 8px #00eaff;
-}
-
-.nav-links a:hover::after,
-.nav-links a.active::after {
-  width: 100%;
-}
-
-.nav-links a:hover,
-.nav-links a.active {
-  color: #00eaff;
-  text-shadow: 0 0 10px #00eaff;
-}
-
-.menu-toggle {
-  display: none;
-  font-size: 1.8rem;
-  cursor: pointer;
-  color: #00eaff;
-}
 
 /* ---------- PAGE HERO ---------- */
 .snippet-hero {
@@ -320,34 +277,7 @@ pre::-webkit-scrollbar-track {
         padding: 15px 20px;
       }
 
-      /* Show menu toggle */
-      .menu-toggle {
-        display: block;
-      }
-
-      /* Mobile menu centered */
-      .nav-links {
-        display: none; /* hidden by default */
-        flex-direction: column;
-        position: fixed;
-        top: 50%;       /* vertical center */
-        left: 50%;      /* horizontal center */
-        transform: translate(-50%, -50%);
-        background: rgb(10, 10, 10);
-        border-radius: 15px;
-        padding: 30px 20px;
-        width: 80%;
-        max-width: 300px;
-        align-items: center;
-        box-shadow: 0 0 15px rgba(0, 234, 255, 0.4);
-        z-index: 999;
-      }
-      .nav-links.active {
-        display: flex;
-      }
-      .nav-links li {
-        margin: 15px 0;
-      }
+      
 
 
 }
@@ -356,21 +286,10 @@ pre::-webkit-scrollbar-track {
 <body>
 
 <header>
-  <nav class="navbar">
-    <a href="index.html" class="logo">ASWCode</a>
-    <ul class="nav-links" id="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="snippets.html" class="active">Snippets</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="blogs.html">Blogs</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="privacy.html">Privacy Policy</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-    <div class="menu-toggle" id="menu-toggle">&#9776;</div>
-  </nav>
-</header>
-
+    <nav class="navbar">
+      <a href="index.html" class="logo">ASWCode</a>
+    </nav>
+  </header>
 <section class="snippet-hero">
   <h1>Glowing Animated Button </h1>
   <p>Build a stunning glowing animated button with smooth hover transitions using simple HTML and CSS. This snippet from ASWCode adds an interactive touch to your modern web designs.</p>

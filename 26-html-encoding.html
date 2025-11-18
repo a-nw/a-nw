@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>HTML Encoding (Character Sets) | ASWCode Tutorials</title>
+  <meta name="description" content="Learn HTML Encoding and Character Sets in a very simple way. Display special characters correctly using UTF-8 and other character sets.">
+  <meta name="keywords" content="HTML encoding, character sets, UTF-8, ISO-8859-1, special characters, meta charset, ASWCode">
+  <link rel="canonical" href="https://aswcode.com/tutorials/html/html-encoding.html">
+
+  <!-- OpenGraph SEO -->
+  <meta property="og:title" content="HTML Encoding (Character Sets) | ASWCode Tutorials">
+  <meta property="og:description" content="Understand HTML character encoding like UTF-8, why it matters, and how to set it correctly using meta tags.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://aswcode.com/tutorials/html/html-encoding.html">
+  <meta property="og:image" content="https://aswcode.com/assets/og-image.png">
+
+  <!-- Twitter SEO -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="HTML Encoding (Character Sets) | ASWCode Tutorials">
+  <meta name="twitter:description" content="Learn how HTML encoding works and why UTF-8 is recommended for modern websites.">
+
+  <link rel="icon" href="/assets/favicon.png" type="image/png">
+
+   <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-M22GBBYSJE"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-M22GBBYSJE');
+  </script>
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5449845490192522"
+     crossorigin="anonymous"></script>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #000;
+      color: #1e293b;
+      line-height: 1.8;
+    }
+
+    header {
+      background: #1a1a1a;
+      color: #fff;
+      text-align: center;
+      padding: 25px 10px;
+      box-shadow: 0 0 10px #00eaff;
+    }
+
+    header h1 {
+      color: #00bcd4;
+      font-size: 1.9rem;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 40px auto;
+      background: #fff;
+      border-radius: 15px;
+      padding: 40px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    h1, h2, h3 {
+      color: #0f172a;
+      margin-bottom: 10px;
+    }
+
+    p { margin-bottom: 15px; font-size: 1rem; }
+
+    a { color: #0284c7; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+   
+
+    #np {
+        color: rgb(30, 224, 224);
+        font-weight: 600;
+    }
+
+    ul { margin-left: 20px; margin-bottom: 20px; }
+
+    .example {
+      background: #f8fafc;
+      padding: 10px 15px;
+      border-radius: 10px;
+      margin: 15px 0;
+      overflow-x: auto;
+    }
+
+    .live-preview {
+      background: #f1f5f9;
+      padding: 15px;
+      border-radius: 10px;
+      margin: 10px 0 30px 0;
+    }
+
+     /* ---------- FLOATING BACK BUTTON ---------- */
+    .floating-back {
+      position:fixed; bottom:20px; right:20px; 
+      background:#00eaff; color:#000; font-weight:bold; 
+      padding:12px 18px; border-radius:30px; 
+      text-decoration:none; box-shadow:0 0 15px rgba(0,234,255,0.5); 
+      transition:0.3s; z-index:200; 
+    }
+    .floating-back:hover { background:#00a8cc; color:#fff; box-shadow:0 0 25px #00eaff; transform:scale(1.1); }
+
+
+    
+   footer {
+      background: #000;
+      padding: 50px 20px 30px;
+      text-align: center;
+      color: #777;
+      margin-top: 40px;
+      
+    }
+
+    .footer-bottom {
+      margin-top: 20px;
+      font-size: 0.9em;
+      border-top: 1px solid rgba(0, 234, 255, 0.2);
+      padding-top: 10px;
+      
+    }
+
+    /* Responsive Design */
+     @media (max-width: 768px) {
+      main {
+        padding: 25px;
+        margin: 30px 15px;
+      }
+
+    }
+
+    @media (max-width: 480px) {
+      main {
+        padding: 20px;
+        margin: 30px 15px;
+        
+      }
+
+      h1 { font-size: 1.3em; }
+      h2 { font-size: 1.1em; }
+      h3 { font-size: 1.em; }
+      pre { font-size: 0.8em; }
+      p, li { font-size: 0.8em; }
+      header h1 { font-size: 1.5em; }
+      header p { font-size: 1.3em; }
+    
+
+     main {
+      margin-top: 50px;
+    }
+  }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>ASWCode Tutorials</h1>
+  <p>Learn Web Development — From Basics to Advanced</p>
+</header>
+
+<main>
+  <h1>HTML Encoding (Character Sets)</h1>
+  <p>HTML Encoding is a way to tell the browser <strong>how to read the text</strong> on your webpage. It ensures that special characters, emojis, and symbols display correctly.</p>
+
+
+
+  <h2>1. What is a Character Set?</h2>
+  <p>A character set (charset) is a list of characters that a webpage can display. Examples:</p>
+
+  <ul>
+    <li><strong>UTF-8</strong> — Supports almost all characters in the world, including emojis.</li>
+    <li><strong>ISO-8859-1</strong> — Supports basic Latin characters.</li>
+  </ul>
+
+  <h2>2. How to Set Character Encoding in HTML</h2>
+  <p>Use the <code>&lt;meta&gt;</code> tag inside the <code>&lt;head&gt;</code> section:</p>
+
+  <div class="example">
+<pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;title&gt;My Website&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;p&gt;Hello World! 🌍&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+  </div>
+
+  <div class="live-preview">
+    <p>Hello World! 🌍</p>
+  </div>
+
+  <h2>3. Why Use UTF-8?</h2>
+  <ul>
+    <li>Supports almost every language and symbol.</li>
+    <li>Ensures emojis and special characters display correctly.</li>
+    <li>Recommended for all modern websites.</li>
+  </ul>
+
+  <h2>4. Example of Incorrect Encoding</h2>
+  <p>If you don’t use proper encoding, special characters may appear as broken symbols:</p>
+
+  <div class="live-preview">
+    <p>Some characters may appear like this: � � �</p>
+  </div>
+
+
+   <p id="np">Next Lesson → <a href="27-html-vs-xhtml.html">HTML vs XHTML</a></p>
+    <p  id="np">Previous Lesson → <a href="25-html-emojis.html">Using Emojis in HTML</a></p>
+</main>
+
+ <a href="html-lessons.html" class="floating-back">&larr; Back </a>
+
+<footer>
+  <div class="footer-bottom">
+    <p>© 2025 ASWCode. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>
