@@ -9,4 +9,4 @@ Disallow: /private/
 Disallow: /config/
 
 # Sitemap (helps Google index all pages)
-Sitemap: https://ascwcode.com/sitemap.xml
+Sitemap: https://aswcode.com/sitemap.xml
