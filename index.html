@@ -13,6 +13,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Acme&family=Montserrat:wght@300..700&display=swap" rel="stylesheet">
 
+  <meta name="p:domain_verify" content="1ef664c81d646116a81e5ed56b3ddc3e"/>
+
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-MNRZP6RF7R"></script>
   <script>
@@ -63,6 +65,42 @@
 
   <style>
     body, html { margin:0; padding:0; font-family:Arial,sans-serif; overflow-x:hidden; }
+
+     /* Loader */
+#loader {
+  position: fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background: rgba(244, 247, 253, 0.849); /* semi-transparent overlay */
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  z-index:9999;
+  opacity:1;
+  transition: opacity 0.5s ease;
+}
+
+.loader {
+  width: 50px;
+  height: 50px;
+  border: 3px solid rgba(230, 79, 142, 0.527);
+  border-top: 3px solid transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+#loader.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
     .parallax { min-height:100vh; background-attachment:fixed; background-position:center; background-repeat:no-repeat; background-size:cover; position:relative; }
     #freelance-hero { background-image:url('freelance-services-hero.png'); }
     #freelance-brand { background-image:url('grow-your-brand-online.png'); }
@@ -70,11 +108,191 @@
     h1 { font-size:4rem; letter-spacing:5px; font-family:"Acme",sans-serif; }
     .content { padding:60px 20px; text-align:center; background:#f4f4f4; }
     h2 { font-size:1.8rem; letter-spacing:2px; text-transform:uppercase; }
-    .freelance-container { display:flex; flex-wrap:wrap; gap:25px; padding:20px; justify-content:center; }
-    .freelance-card { width:calc(25% - 20px); background:#fff; border-radius:15px; padding:30px 20px; box-shadow:0 4px 15px rgba(0,0,0,0.12); transition:0.3s; text-align:center; }
-    .freelance-card:hover { transform:translateY(-10px); }
-    .sample-btn { background:#e46eb6; color:#fff; padding:10px 20px; border-radius:8px; text-decoration:none; display:inline-block; font-weight:bold; }
-    footer { background:#333; color:#fff; padding:40px 20px; text-align:center; font-size:14px; }
+     /* ================= Cards ================= */
+
+    .freelance-container {
+      display:flex;
+      flex-wrap:wrap;
+      gap:25px;
+      padding:20px;
+      justify-content:center;
+    }
+
+    .freelance-card {
+      width:calc(25% - 20px);
+      background:#fff;
+      border-radius:15px;
+      padding:30px 20px;
+      box-shadow:0 4px 15px rgba(0,0,0,0.12);
+      transition:0.35s ease;
+      text-align:center;
+      border:2px solid transparent;
+    }
+
+    .freelance-card:hover {
+      transform:translateY(-10px);
+    }
+
+    /* Pastel borders + hover fill */
+    .freelance-card:nth-child(1)  { border-color:#f8cdda; }
+    .freelance-card:nth-child(1):hover { background:#f8cdda; }
+
+    .freelance-card:nth-child(2)  { border-color:#cce5ff; }
+    .freelance-card:nth-child(2):hover { background:#cce5ff; }
+
+    .freelance-card:nth-child(3)  { border-color:#d4f4dd; }
+    .freelance-card:nth-child(3):hover { background:#d4f4dd; }
+
+    .freelance-card:nth-child(4)  { border-color:#fff3cd; }
+    .freelance-card:nth-child(4):hover { background:#fff3cd; }
+
+    .freelance-card:nth-child(5)  { border-color:#e6d9ff; }
+    .freelance-card:nth-child(5):hover { background:#e6d9ff; }
+
+    .freelance-card:nth-child(6)  { border-color:#ffd6cc; }
+    .freelance-card:nth-child(6):hover { background:#ffd6cc; }
+
+    .freelance-card:nth-child(7)  { border-color:#d1f0f6; }
+    .freelance-card:nth-child(7):hover { background:#d1f0f6; }
+
+    .freelance-card:nth-child(8)  { border-color:#fce1ff; }
+    .freelance-card:nth-child(8):hover { background:#fce1ff; }
+
+    .freelance-card:nth-child(9)  { border-color:#e0ffe6; }
+    .freelance-card:nth-child(9):hover { background:#e0ffe6; }
+
+    .freelance-card:nth-child(10) { border-color:#ffe0e0; }
+    .freelance-card:nth-child(10):hover { background:#ffe0e0; }
+
+    .freelance-card:nth-child(11) { border-color:#e0f0ff; }
+    .freelance-card:nth-child(11):hover { background:#e0f0ff; }
+
+    .freelance-card:nth-child(12) { border-color:#fdf1d6; }
+    .freelance-card:nth-child(12):hover { background:#fdf1d6; }
+
+     .freelance-card:nth-child(13)  { border-color:#f8cdda; }
+    .freelance-card:nth-child(13):hover { background:#f8cdda; }
+
+    .freelance-card:nth-child(14)  { border-color:#cce5ff; }
+    .freelance-card:nth-child(14):hover { background:#cce5ff; }
+
+    .freelance-card:nth-child(15)  { border-color:#d4f4dd; }
+    .freelance-card:nth-child(15):hover { background:#d4f4dd; }
+
+    .freelance-card:nth-child(16)  { border-color:#fff3cd; }
+    .freelance-card:nth-child(16):hover { background:#fff3cd; }
+
+    .freelance-card:nth-child(17)  { border-color:#e6d9ff; }
+    .freelance-card:nth-child(17):hover { background:#e6d9ff; }
+
+    .freelance-card:nth-child(18)  { border-color:#ffd6cc; }
+    .freelance-card:nth-child(18):hover { background:#ffd6cc; }
+
+    .sample-btn {
+      background:#e46eb6;
+      color:#fff;
+      padding:10px 20px;
+      border-radius:8px;
+      text-decoration:none;
+      display:inline-block;
+      font-weight:bold;
+      margin-top:10px;
+    }
+
+    /* Footer */
+    .footer {
+      background-color: #333;
+      color: #fff;
+      padding: 40px 20px;
+    }
+
+    .footer-container {
+      display: flex;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .footer-section {
+      flex: 1;
+      min-width: 200px;
+      margin: 70px;
+    }
+
+    .footer-section h3 {
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .footer-section p {
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    .footer-section ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-section ul li {
+      margin-bottom: 10px;
+    }
+
+    .footer-section ul li a {
+      color: #fff;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+      /* 🔥 Underline hover effect added here */
+    .footer-section ul li a {
+      color:#fff;
+      text-decoration:none;
+      position:relative;
+      padding-bottom:4px;
+    }
+
+    .footer-section ul li a::after {
+      content:"";
+      position:absolute;
+      left:0;
+      bottom:0;
+      width:0;
+      height:2px;
+      background:#ffcc00;
+      transition:width 0.3s ease;
+    }
+
+    .footer-section ul li a:hover::after {
+      width:100%;
+    }
+
+    .social-icons a {
+      margin-right: 15px;
+      display: inline-block;
+    }
+
+    .social-icons img {
+      width: 24px;
+      height: 24px;
+      filter: invert(100%);
+      transition: transform 0.3s ease;
+    }
+
+    .social-icons a:hover img {
+      transform: translateY(-5px);
+    }
+
+    .footer-bottom {
+      text-align: center;
+      padding-top: 20px;
+      border-top: 1px solid #555;
+      margin-top: 20px;
+      font-size: 0.9rem;
+    }
     .whatsapp-wrapper { position:fixed; bottom:40px; right:40px; display:flex; align-items:center; gap:12px; z-index:1000; }
     .whatsapp-text { background:#25d366; color:#fff; padding:10px 14px; border-radius:25px; font-size:14px; font-weight:500; box-shadow:2px 2px 6px rgba(0,0,0,0.2); white-space:nowrap; }
     .whatsapp-float { width:60px; height:60px; background:#e3e7e5; border-radius:50%; display:flex; justify-content:center; align-items:center; box-shadow:2px 2px 6px rgba(0,0,0,0.3); transition:transform 0.3s; }
@@ -90,15 +308,18 @@
 </head>
 <body>
 
+     <!-- Loader -->
+<div id="loader">
+  <div class="loader"></div>
+</div>
+
 <section class="parallax" id="freelance-hero">
   <div class="overlay"><h1>ASWCode</h1></div>
 </section>
 
 <section class="content">
  <h2>Welcome to ASWCode</h2>
- <p>
-  ASWCode provides professional freelance services including websites, graphic design, digital products, social media content, and AI-powered solutions. We bring your ideas to life with creativity, precision, and high-quality work at affordable prices.
-</p>
+ <p> ASWCode provides professional freelance services, including website design, graphic design, digital products, social media content, and AI-powered solutions. We bring your ideas to life with creativity, precision, and high-quality work at affordable prices. </p>
 
 </section>
 
@@ -124,7 +345,7 @@
     <div class="freelance-card"><h3>AI Image Generation</h3><p>Unique AI-generated illustrations & graphics.</p><a class="sample-btn" href="#">From $1</a></div>
     <div class="freelance-card"><h3>Shopify Store Setup</h3><p>Complete Shopify store setup & customization.</p><a class="sample-btn" href="#">From $10</a></div>
     <div class="freelance-card"><h3>Birthday & Event Invitations</h3><p>Creative invitations for birthdays and all events.</p><a class="sample-btn" href="#">From $1</a></div>
-    <div class="freelance-card"><h3>Greeting / Thank You Cards</h3><p>Adorable greeting & thank you card designs.</p><a class="sample-btn" href="#">From $1</a></div>
+    <div class="freelance-card"><h3>Greeting Cards</h3><p>Adorable greeting & thank you card designs.</p><a class="sample-btn" href="#">From $1</a></div>
     <div class="freelance-card"><h3>Gift Box Design</h3><p>Custom gift box & packaging designs for products.</p><a class="sample-btn" href="#">From $1</a></div>
     <div class="freelance-card"><h3>Typing Services</h3><p>Fast and accurate typing for documents & PDFs.</p><a class="sample-btn" href="#">From $1</a></div>
     <div class="freelance-card"><h3>Data Entry</h3><p>Organized data entry for spreadsheets & databases.</p><a class="sample-btn" href="#">From $3</a></div>
@@ -133,9 +354,7 @@
   </div>
 </section>
 
-<footer>
-  <p>&copy; 2025 ASWCode. All rights reserved.</p>
-</footer>
+
 
 <!-- WhatsApp Floating Button -->
 <div class="whatsapp-wrapper">
@@ -145,6 +364,67 @@
     <img class="whatsapp-icon" alt="WhatsApp Contact">
   </a>
 </div>
+
+<!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-section">
+        <h3>About ASWCode</h3>
+        <p>We provide modern freelance services to help you grow your brand online.</p>
+      </div>
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about.html">About Us</a></li>
+          <li><a href="/terms-and-conditions.html">Terms & Conditions</a></li>
+          <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="/refund-policy.html">Refund Policy</a></li>
+          <li><a href="/contact.html">Contact Us</a></li>
+
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Follow Us</h3>
+        <div class="social-icons">
+        <a href="https://www.facebook.com/profile.php?id=61583445265382" target="_blank"><img src="https://img.icons8.com/ios-filled/50/000000/facebook-new.png" alt="Facebook"></a>
+        <a href="https://www.youtube.com/@aswcode" target="_blank"><img src="https://img.icons8.com/ios-filled/50/000000/youtube-play.png" alt="YouTube"></a>
+        <a href="https://www.instagram.com/aswcode/" target="_blank"><img src="https://img.icons8.com/ios-filled/50/000000/instagram-new.png" alt="Instagram"></a>
+        <a href="https://www.pinterest.com/aswcode/" target="_blank"><img src="https://img.icons8.com/ios-filled/50/000000/pinterest.png" alt="Pinterest"></a>
+
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025  ASWCode. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- JavaScript for hover-effect -->
+
+  <script>
+  // Fade out loader after page load
+  window.addEventListener("load", function(){
+    const loader = document.getElementById("loader");
+    loader.classList.add("hidden"); // fade out
+    setTimeout(() => { loader.style.display = "none"; }, 500);
+  });
+</script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const headers = document.querySelectorAll('.hover-effect');
+      headers.forEach(header => {
+        const text = header.textContent;
+        header.innerHTML = '';
+        text.split('').forEach(letter => {
+          const span = document.createElement('span');
+          span.textContent = letter === ' ' ? '\u00A0' : letter;
+          header.appendChild(span);
+        });
+      });
+    });
+  </script>
 
 </body>
 </html>
