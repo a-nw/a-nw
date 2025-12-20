@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ASWCode | HTML Tutorial</title>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5449845490192522"
+     crossorigin="anonymous"></script>
+
+<!-- SEO Meta Tags -->
+<meta name="description" content="Learn HTML Tutorial step-by-step with ASWCode. Access all HTML lessons from basics to advanced with live examples and explanations.">
+<meta name="keywords" content="HTML tutorial, HTML lessons, Learn HTML, HTML course, HTML for beginners, HTML examples, ASWCode HTML tutorial">
+<meta name="author" content="Achini Wanasinghe">
+
+<!-- Open Graph / Social Sharing -->
+<meta property="og:title" content="ASWCode | HTML Tutorial">
+<meta property="og:description" content="Complete HTML Tutorial with lessons from basics to advanced. Learn HTML easily with ASWCode.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://aswcode.com/html-lessons.html">
+<meta property="og:image" content="https://aswcode.com/preview.png">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="ASWCode | HTML Tutorial">
+<meta name="twitter:description" content="Step-by-step HTML Tutorial from basics to advanced with examples.">
+<meta name="twitter:image" content="https://aswcode.com/preview.png">
+
+<!-- JSON-LD Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "ASWCode HTML Tutorial",
+  "url": "https://aswcode.com/html-lessons.html",
+  "description": "Complete HTML Tutorial with examples and explanations.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "ASWCode",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://aswcode.com/logo.png"
+    }
+  }
+}
+</script>
+
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-M22GBBYSJE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-M22GBBYSJE');
+</script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+<style>
+/* ===== Base ===== */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: radial-gradient(circle at top, #050505, #0b0b0b);
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* ---------- NAVBAR ---------- */
+header {
+  background: #1a1a1a;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  box-shadow: 0 0 10px #00eaff;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #00bcd4;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.logo:hover {
+  color: #00eaff;
+  text-shadow: 0 0 10px #00eaff, 0 0 30px #00eaff, 0 0 50px #00eaff;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: #fff;
+  font-weight: 500;
+  text-decoration: none;
+  transition: 0.3s;
+  position: relative;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #00eaff;
+  transition: 0.3s;
+  box-shadow: 0 0 8px #00eaff;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+  width: 100%;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #00eaff;
+  text-shadow: 0 0 10px #00eaff;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: #00eaff;
+}
+
+/* ---------- PAGE HERO ---------- */
+.snippet-hero {
+  text-align: center;
+  padding: 120px 20px 20px;
+  color: #fff;
+}
+
+.snippet-hero h1 {
+  font-size: 2.8rem;
+  color: #00eaff;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.snippet-hero p {
+  font-size: 1.2rem;
+  color: #ccc;
+  max-width: 700px;
+  margin: 0 auto 25px;
+  line-height: 1.6;
+}
+
+/* ---------- SEARCH BAR ---------- */
+.search-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.search-container input {
+  width: 80%;
+  max-width: 400px;
+  padding: 10px 15px;
+  font-size: 1rem;
+  border-radius: 30px;
+  border: 1px solid #00eaff;
+  outline: none;
+  background: #1a1a1a;
+  color: #fff;
+  transition: 0.3s;
+  box-shadow: 0 0 8px rgba(0,234,255,0.2);
+}
+
+.search-container input:focus {
+  background: #111;
+  box-shadow: 0 0 15px #00eaff, 0 0 30px rgba(0,234,255,0.5);
+}
+
+/* ---------- LESSON LIST ---------- */
+.snippet-list {
+  max-width: 650px;
+  margin: 40px auto 80px;
+  padding: 0 20px;
+}
+
+.snippet-list ol {
+  counter-reset: snippet;
+  list-style: none;
+  padding-left: 0;
+}
+
+.snippet-list li {
+  counter-increment: snippet;
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.snippet-list li::before {
+  content: counter(snippet);
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #00eaff;
+  margin-right: 15px;
+  min-width: 25px;
+  text-align: center;
+}
+
+/* Modern hover with shadow & gradient glow */
+.snippet-list a {
+  display: block;
+  background: rgba(15, 15, 15, 0.85);
+  padding: 12px 20px;
+  border-radius: 10px;
+  color: #00eaff;
+  text-decoration: none;
+  width: 100%;
+  transition: 0.4s;
+  box-shadow: 0 4px 10px rgba(0,234,255,0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.snippet-list a::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: #00eaff;
+  background-size: 400% 400%;
+  z-index: 0;
+  transition: opacity 0.4s;
+  opacity: 0;
+  filter: blur(15px);
+  animation: gradientGlow 6s linear infinite;
+}
+
+.snippet-list a span {
+  position: relative;
+  z-index: 1;
+}
+
+.snippet-list a:hover::before {
+  opacity: 0.25;
+}
+
+.snippet-list a:hover {
+  color: #fff;
+  transform: translateX(5px) scale(1.03);
+  box-shadow: 0 8px 20px rgba(0,234,255,0.4), 0 0 15px rgba(0,234,255,0.3);
+}
+
+@keyframes gradientGlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ---------- BACK TO TOP BUTTON ---------- */
+#backToTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 200;
+  background: #00eaff;
+  color: #000;
+  border: none;
+  border-radius: 50%;
+  padding: 12px 16px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,234,255,0.3), 0 0 15px #00eaff;
+  transition: transform 0.3s, box-shadow 0.3s, opacity 0.3s;
+  opacity: 0;
+}
+
+#backToTop:hover {
+  transform: scale(1.2);
+  box-shadow: 0 6px 15px rgba(0,234,255,0.5), 0 0 20px #00eaff;
+}
+
+#backToTop.show {
+  opacity: 1;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .navbar { padding: 15px 20px; }
+  .menu-toggle { display: block; }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgb(10, 10, 10);
+    border-radius: 15px;
+    padding: 30px 20px;
+    width: 80%;
+    max-width: 300px;
+    align-items: center;
+    box-shadow: 0 0 15px rgba(0, 234, 255, 0.4);
+    z-index: 999;
+  }
+  .nav-links.active { display: flex; }
+  .nav-links li { margin: 15px 0; }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="navbar">
+    <a href="index.html" class="logo">ASWCode</a>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="html-tutorial.html" class="active">HTML Tutorial</a></li>
+      <li><a href="snippets.html">Snippets</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="terms.html">Terms & Conditions</a></li>
+      <li><a href="privacy.html">Privacy Policy</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+  </nav>
+</header>
+
+<section class="snippet-hero">
+  <h1>HTML Tutorial</h1>
+  <p>Step-by-step HTML tutorials from basics to advanced.</p>
+
+  <div class="search-container">
+    <input type="text" id="searchInput" placeholder="Search lessons (e.g. Forms, Images, Links)...">
+  </div>
+</section>
+
+<section class="snippet-list" id="snippetList">
+  <ol >
+    <li><a href="01-html-basics.html"><span>HTML Basics for Beginners</span></a></li>
+    <li><a href="02-html-tags.html"><span>Understanding HTML Tags</span></a></li>
+    <li><a href="03-html-attributes.html"><span>HTML Attributes</span></a></li>
+    <li><a href="04-html-comments-and-spacing.html"><span>HTML Comments and Spacing</span></a></li>
+    <li><a href="05-html-lists.html"><span>HTML Lists (Ordered & Unordered)</span></a></li>
+    <li><a href="06-html-tables.html"><span>HTML Tables</span></a></li>
+    <li><a href="07-html-forms-explained.html"><span>HTML Forms</span></a></li>
+    <li><a href="08-html-images-explained.html"><span>HTML Images</span></a></li>
+    <li><a href="09-html-links.html"><span>HTML Links</span></a></li>
+    <li><a href="10-style-attribute.html"><span>HTML Style Attribute</span></a></li>
+    <li><a href="11-text-formatting.html"><span>HTML Text Formatting</span></a></li>
+    <li><a href="12-quotations-special-elements.html"><span>HTML Quotations & Special Elements</span></a></li>
+    <li><a href="13-html-colors.html"><span>HTML Colors</span></a></li>
+    <li><a href="14-html-block-inline.html"><span>HTML Block and Inline Elements</span></a></li>
+    <li><a href="15-div-class-id.html"><span>HTML &lt;div&gt; Element</span></a></li>
+    <li><a href="16-html-span.html"><span>HTML &lt;span&gt; Element</span></a></li>
+    <li><a href="17-html-class-attribute.html"><span>HTML Class Attribute</span></a></li>
+    <li><a href="18-html-id-attribute.html"><span>HTML ID Attribute</span></a></li>
+    <li><a href="19-html-iframe.html"><span>HTML &lt;iframe&gt; Element</span></a></li>
+    <li><a href="20-html-responsive-design.html"><span>HTML Responsive Design</span></a></li>
+    <li><a href="21-html-computer-code.html"><span>HTML Computer Code Elements</span></a></li>
+    <li><a href="22-html-semantic-elements.html"><span>HTML Semantic Elements</span></a></li>
+    <li><a href="23-html-entities.html"><span>HTML Entities</span></a></li>
+    <li><a href="24-html-symbols.html"><span>HTML Symbols</span></a></li>
+    <li><a href="25-html-emojis.html"><span>Using Emojis in HTML</span></a></li>
+    <li><a href="26-html-encoding.html"><span>HTML Encoding (Character Sets)</span></a></li>
+    <li><a href="27-html-vs-xhtml.html"><span>HTML vs XHTML</span></a></li>
+    <li><a href="28-html-file-naming.html"><span>HTML File Naming</span></a></li>
+    <li><a href="29-html-keyboard-shortcuts.html"><span>HTML Keyboard Shortcut Cheat Sheet</span></a></li>
+  </ol>
+</section>
+
+<!-- Back to Top Button -->
+<button id="backToTop" title="Back to Top">
+  <i class="fa-solid fa-angle-up"></i>
+</button>
+
+<script>
+const menuToggle = document.getElementById('menu-toggle');
+const navLinks = document.getElementById('nav-links');
+
+menuToggle.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+});
+
+// Close menu when a link is clicked
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', () => {
+    navLinks.classList.remove('active');
+  });
+});
+
+document.addEventListener('click', (e) => {
+  if (!navLinks.contains(e.target) && !menuToggle.contains(e.target)) {
+    navLinks.classList.remove('active');
+  }
+});
+
+// Search filter logic
+const searchInput = document.getElementById('searchInput');
+const snippetList = document.getElementById('snippetList');
+const items = snippetList.getElementsByTagName('li');
+
+searchInput.addEventListener('keyup', function() {
+  const filter = this.value.toLowerCase().trim();
+  for (let i = 0; i < items.length; i++) {
+    const text = items[i].innerText.toLowerCase();
+    items[i].style.display = text.includes(filter) ? 'flex' : 'none';
+  }
+});
+
+// Back to Top button
+const backToTop = document.getElementById('backToTop');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 300) {
+    backToTop.classList.add('show');
+  } else {
+    backToTop.classList.remove('show');
+  }
+});
+backToTop.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+</script>
+
+</body>
+</html>

@@ -3,37 +3,40 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ASWCode | About</title>
+  <title>ASWCode | Blogs</title>
 
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5449845490192522"
      crossorigin="anonymous"></script>
 
-  <!-- SEO Meta Tags -->
-  <meta name="description" content="Learn HTML, CSS, and JavaScript through practical examples, code snippets, mini projects, and interactive games at ASWCode.">
-  <meta name="keywords" content="ASWCode, coding, HTML, CSS, JavaScript, mini projects, code snippets, learn web development">
+  <!-- ===== SEO Meta Tags ===== -->
+  <meta name="description" content="Read ASWCode blogs to learn web development, coding techniques, and project ideas in HTML, CSS, and JavaScript. Stay inspired and improve your frontend skills.">
+  <meta name="keywords" content="ASWCode blogs, web development blogs, coding tutorials, frontend projects, HTML, CSS, JavaScript learning, ASWCode articles">
   <meta name="author" content="Achini Wanasinghe">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://aswcode.com/blogs.html" />
 
-  <!-- Open Graph / Social Sharing -->
-  <meta property="og:title" content="ASWCode | About">
-  <meta property="og:description" content="Learn HTML, CSS, and JavaScript through practical examples, code snippets, mini projects, and interactive games at ASWCode.">
+  <!-- ===== Open Graph / Social Sharing ===== -->
+  <meta property="og:title" content="ASWCode | Blogs">
+  <meta property="og:description" content="Explore the latest ASWCode blogs featuring tutorials, project breakdowns, and coding insights for HTML, CSS, and JavaScript learners.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://aswcode.com/about.html">
+  <meta property="og:url" content="https://aswcode.com/blogs.html">
   <meta property="og:image" content="https://aswcode.com/preview.png">
+  <meta property="og:site_name" content="ASWCode">
 
-  <!-- Twitter Card -->
+  <!-- ===== Twitter Card ===== -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="ASWCode | About">
-  <meta name="twitter:description" content="Learn HTML, CSS, and JavaScript through practical examples, code snippets, mini projects, and interactive games at ASWCode.">
+  <meta name="twitter:title" content="ASWCode | Blogs">
+  <meta name="twitter:description" content="Learn frontend development with ASWCode blogs — from HTML basics to JavaScript projects and design inspiration.">
   <meta name="twitter:image" content="https://aswcode.com/preview.png">
 
-  <!-- JSON-LD Structured Data -->
+  <!-- ===== JSON-LD Structured Data (Blog & Breadcrumbs) ===== -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "AboutPage",
-    "name": "ASWCode About Page",
-    "url": "https://aswcode.com/about.html",
-    "description": "Learn HTML, CSS, and JavaScript through practical examples, code snippets, mini projects, and interactive games at ASWCode.",
+    "@type": "Blog",
+    "name": "ASWCode Blog",
+    "url": "https://aswcode.com/blogs.html",
+    "description": "ASWCode blog provides educational content, coding tutorials, and creative web development ideas in HTML, CSS, and JavaScript.",
     "publisher": {
       "@type": "Organization",
       "name": "ASWCode",
@@ -45,20 +48,28 @@
         "https://www.facebook.com/aswcode",
         "https://www.youtube.com/@aswcode",
         "https://www.instagram.com/aswcode"
-      ],
-      "founder": "Achini Wanasinghe",
-      "foundingDate": "2025"
+      ]
+    },
+    "author": {
+      "@type": "Person",
+      "name": "Achini Wanasinghe"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://aswcode.com/blogs.html"
     }
   }
   </script>
 
-  <!-- Google Analytics 4 -->
+  <!-- ===== Google Analytics 4 ===== -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-M22GBBYSJE"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-M22GBBYSJE');
+    gtag('config', 'G-M22GBBYSJE', {
+      page_path: window.location.pathname,
+    });
   </script>
 
   <style>
@@ -123,10 +134,7 @@
     .nav-links a:hover::after,
     .nav-links a.active::after { width: 100%; }
     .nav-links a:hover,
-    .nav-links a.active {
-      color: #00eaff;
-      text-shadow: 0 0 10px #00eaff;
-    }
+    .nav-links a.active { color: #00eaff; text-shadow: 0 0 10px #00eaff; }
     .menu-toggle {
       display: none;
       font-size: 1.8rem;
@@ -134,7 +142,7 @@
       color: #00eaff;
     }
 
-    /* ===== About Section ===== */
+    /* ===== Blog Section ===== */
     .content {
       display: flex;
       flex-direction: column;
@@ -151,7 +159,8 @@
       margin-bottom: 30px;
       margin-top: 100px;
     }
-    .about-box {
+
+    .blog-box {
       max-width: 800px;
       background: rgba(15, 15, 15, 0.8);
       padding: 40px;
@@ -162,7 +171,35 @@
       color: #ddd;
       font-size: 1.05em;
       backdrop-filter: blur(10px);
+      margin-bottom: 30px;
       animation: glowPulse 3s infinite alternate ease-in-out;
+    }
+
+    .blog-box h2 {
+      color: #00eaff;
+      font-size: 1.5em;
+      margin-bottom: 10px;
+    }
+
+    .blog-box p {
+      margin-bottom: 15px;
+      color: #ccc;
+    }
+
+    .blog-box button {
+      background: #00eaff;
+      border: none;
+      color: #000;
+      font-weight: 600;
+      padding: 10px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .blog-box button:hover {
+      background: #00bcd4;
+      box-shadow: 0 0 15px #00eaff;
     }
 
     /* ---------- FOOTER ---------- */
@@ -187,22 +224,14 @@
 
     /* ===== Responsive ===== */
     @media (max-width: 768px) {
-      .navbar {
-        padding: 15px 20px;
-      }
-
-      /* Show menu toggle */
-      .menu-toggle {
-        display: block;
-      }
-
-      /* Mobile menu centered */
+      .navbar { padding: 15px 20px; }
+      .menu-toggle { display: block; }
       .nav-links {
-        display: none; /* hidden by default */
+        display: none;
         flex-direction: column;
         position: fixed;
-        top: 50%;       /* vertical center */
-        left: 50%;      /* horizontal center */
+        top: 50%;
+        left: 50%;
         transform: translate(-50%, -50%);
         background: rgb(10, 10, 10);
         border-radius: 15px;
@@ -213,56 +242,49 @@
         box-shadow: 0 0 15px rgba(0, 234, 255, 0.4);
         z-index: 999;
       }
-      .nav-links.active {
-        display: flex;
-      }
-      .nav-links li {
-        margin: 15px 0;
-      }
+      .nav-links.active { display: flex; }
+      .nav-links li { margin: 15px 0; }
     }
   </style>
 </head>
 <body>
+  <!-- ---------- HEADER ---------- -->
   <header>
     <nav class="navbar">
       <a href="index.html" class="logo">ASWCode</a>
-      <div class="menu-toggle" id="menu-toggle">&#9776;</div>
       <ul class="nav-links" id="nav-links">
         <li><a href="index.html">Home</a></li>
-         <li><a href="html-tutorial.html" >HTML Tutorial</a></li>
+       <li><a href="html-tutorial.html" >HTML Tutorial</a></li>
         <li><a href="snippets.html">Snippets</a></li>
         <li><a href="projects.html">Projects</a></li>
-        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="blogs.html" class="active">Blogs</a></li>
+        <li><a href="about.html">About</a></li>
         <li><a href="terms.html">Terms & Conditions</a></li>
         <li><a href="privacy.html">Privacy Policy</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
+      <div class="menu-toggle" id="menu-toggle">&#9776;</div>
     </nav>
   </header>
 
+  <!-- ===== BLOG CONTENT ===== -->
   <section class="content">
-    <h1>About ASWCode</h1>
-    <div class="about-box">
-  <p><strong>ASWCode</strong> is a modern learning platform designed for beginners, students, and developers who want to explore the world of 
-    <span style="color:#00eaff;">HTML</span>, 
-    <span style="color:#00eaff;">CSS</span>, and 
-    <span style="color:#00eaff;">JavaScript</span> through practical examples.
-  </p>
-  
-  <p>We offer <strong>code snippets</strong> and <strong>real-world mini projects</strong> that help you learn by doing. Each snippet is crafted to be easy to understand, responsive, and ready to use in your own projects.</p>
-  
-  <p>Our goal is to make coding <strong>fun, simple, and accessible</strong> to everyone — whether you’re building your first website or exploring creative front-end designs.</p>
-  
- 
+    <h1>ASWCode Blogs</h1>
 
+    <div class="blog-box">
+      <h2>How to Earn Money Online: Beginner’s Complete Guide</h2>
+      <p>Learn step-by-step how to start earning money online through freelancing, digital products, content creation, and affiliate marketing. Discover safe platforms and build a sustainable income.</p>
+      <button onclick="window.location.href='blog-earn-online.html'">Read More</button>
+    </div>
 
-
-  
-  <p>Join the <strong>ASWCode</strong> community and start your journey to becoming a confident web developer today!</p>
-</div>
-
+    <div class="blog-box">
+      <h2>How to Avoid Online Earning Scams and Stay Safe: The Complete Guide</h2>
+      <p>Protect yourself from online fraud and fake earning platforms. Learn how to identify scams, secure your information, and earn safely online.</p>
+      <button onclick="window.location.href='blog-online-safety.html'">Read More</button>
+    </div>
   </section>
 
+  <!-- ---------- FOOTER ---------- -->
   <footer>
     <div class="footer-bottom">
       <p>© 2025 ASWCode. All rights reserved.</p>
@@ -273,23 +295,15 @@
     const menuToggle = document.getElementById('menu-toggle');
     const navLinks = document.getElementById('nav-links');
 
-    menuToggle.addEventListener('click', () => {
-      navLinks.classList.toggle('active');
-    });
-
-    // Close menu when a link is clicked
+    menuToggle.addEventListener('click', () => navLinks.classList.toggle('active'));
     document.querySelectorAll('.nav-links a').forEach(link => {
-      link.addEventListener('click', () => {
-        navLinks.classList.remove('active');
-      });
+      link.addEventListener('click', () => navLinks.classList.remove('active'));
     });
-
     document.addEventListener('click', (e) => {
-  if (!navLinks.contains(e.target) && !menuToggle.contains(e.target)) {
-    navLinks.classList.remove('active');
-  }
-});
-
+      if (!navLinks.contains(e.target) && !menuToggle.contains(e.target)) {
+        navLinks.classList.remove('active');
+      }
+    });
   </script>
 </body>
 </html>

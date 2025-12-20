@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Basic Meta -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO Title & Description -->
+  <title>HTML vs XHTML | ASWCode Tutorials</title>
+  <meta name="description" content="Learn the difference between HTML and XHTML with simple examples. Understand rules, syntax, case sensitivity, strictness, and usage with ASWCode tutorials.">
+  <meta name="keywords" content="HTML vs XHTML, XHTML rules, HTML syntax, XHTML syntax, HTML tutorial, ASWCode">
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://aswcode.com/tutorials/html/html-vs-xhtml.html">
+
+  <!-- Favicon -->
+  <link rel="icon" href="/assets/favicon.png" type="image/png">
+
+  <!-- Social Share (OpenGraph) -->
+  <meta property="og:title" content="HTML vs XHTML | ASWCode Tutorials">
+  <meta property="og:description" content="Simple and clear explanation of HTML vs XHTML with examples.">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="/assets/og-html.webp">
+
+  <!-- Fonts -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+  </style>
+
+   <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-M22GBBYSJE"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-M22GBBYSJE');
+  </script>
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5449845490192522"
+     crossorigin="anonymous"></script>
+
+  <!-- Core Styles -->
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #000;
+      color: #1e293b;
+      line-height: 1.8;
+    }
+
+    header {
+      background: #1a1a1a;
+      color: #fff;
+      text-align: center;
+      padding: 25px 10px;
+      box-shadow: 0 0 10px #00eaff;
+    }
+
+    header h1 {
+      color: #00bcd4;
+      font-size: 28px;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 40px auto;
+      background: #fff;
+      border-radius: 15px;
+      padding: 35px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+    }
+
+    h1, h2, h3 {
+      color: #0f172a;
+      margin-bottom: 10px;
+    }
+
+p { margin-bottom: 15px; font-size: 1rem; }
+
+    a { color: #0284c7; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+   
+
+    #np {
+        color: rgb(30, 224, 224);
+        font-weight: 600;
+    }
+
+    ul { margin-left: 20px; }
+
+    .example, .live-preview {
+      background: #f8fafc;
+      padding: 12px 15px;
+      border-radius: 10px;
+      margin: 15px 0;
+      overflow-x: auto;
+      
+    }
+
+   
+
+    /* Tables */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      font-size: 15px;
+    }
+
+    th, td {
+      padding: 12px;
+      border: 1px solid #94a3b8;
+      text-align: left;
+    }
+
+    th {
+      background: #0ea5e9;
+      color: #fff;
+    }
+
+    /* Responsive Table */
+    .table-wrapper {
+      overflow-x: auto;
+      border-radius: 10px;
+      margin: 20px 0;
+       
+    }
+
+   
+
+     /* ---------- FLOATING BACK BUTTON ---------- */
+    .floating-back {
+      position:fixed; bottom:20px; right:20px; 
+      background:#00eaff; color:#000; font-weight:bold; 
+      padding:12px 18px; border-radius:30px; 
+      text-decoration:none; box-shadow:0 0 15px rgba(0,234,255,0.5); 
+      transition:0.3s; z-index:200; 
+    }
+    .floating-back:hover { background:#00a8cc; color:#fff; box-shadow:0 0 25px #00eaff; transform:scale(1.1); }
+
+
+    footer {
+      background: #000;
+      padding: 50px 20px 30px;
+      text-align: center;
+      color: #777;
+      margin-top: 40px;
+      
+    }
+
+    .footer-bottom {
+      margin-top: 20px;
+      font-size: 0.9em;
+      border-top: 1px solid rgba(0, 234, 255, 0.2);
+      padding-top: 10px;
+      
+    }
+
+ /* Responsive Design */
+     @media (max-width: 768px) {
+      main {
+        padding: 25px;
+        margin: 30px 15px;
+      }
+
+    }
+
+    @media (max-width: 480px) {
+      main {
+        padding: 20px;
+        margin: 30px 15px;
+        
+      }
+
+      h1 { font-size: 1.3em; }
+      h2 { font-size: 1.1em; }
+      h3 { font-size: 1.em; }
+      pre { font-size: 0.8em; }
+      p, li { font-size: 0.8em; }
+      header h1 { font-size: 1.5em; }
+      header p { font-size: 1.3em; }
+    
+
+     main {
+      margin-top: 50px;
+    }
+
+    table{
+      font-size: 0.8em;
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 200px;
+    }
+  }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>ASWCode Tutorials</h1>
+  <p>Learn Web Development - From Basics to Advanced</p>
+</header>
+
+<main>
+  <h1>HTML vs XHTML</h1>
+  <p>HTML and XHTML are both used to build webpages, but they follow different rules. Here’s a simple comparison to understand both easily.</p>
+
+
+
+  <h2>1. HTML</h2>
+  <ul>
+    <li>HTML stands for <strong>HyperText Markup Language</strong>.</li>
+    <li>More flexible - browsers can fix mistakes.</li>
+    <li>Tags are <strong>not case-sensitive</strong>.</li>
+    <li>Some tags can remain unclosed.</li>
+  </ul>
+
+  <h2>2. XHTML</h2>
+  <ul>
+    <li>XHTML stands for <strong>Extensible HyperText Markup Language</strong>.</li>
+    <li>Very strict - errors break the page.</li>
+    <li>Tags are <strong>case-sensitive</strong> and must be lowercase.</li>
+    <li>Every tag must be closed.</li>
+    <li>Attributes must always be quoted.</li>
+  </ul>
+
+  <h2>3. Simple Example</h2>
+
+  <p><strong>HTML version:</strong></p>
+  <div class="example">
+<pre>
+&lt;p&gt;Hello World&lt;/p&gt;
+&lt;br&gt;
+&lt;img src="logo.png"&gt;
+</pre>
+  </div>
+
+  <p><strong>XHTML version:</strong></p>
+  <div class="example">
+<pre>
+&lt;p&gt;Hello World&lt;/p&gt;
+&lt;br /&gt;
+&lt;img src="logo.png" /&gt;
+</pre>
+  </div>
+
+  <h2>4. Key Differences</h2>
+
+  <div class="table-wrapper">
+    <table>
+      <tr>
+        <th>Feature</th>
+        <th>HTML</th>
+        <th>XHTML</th>
+      </tr>
+      <tr>
+        <td>Case Sensitivity</td>
+        <td>Not case-sensitive</td>
+        <td>Case-sensitive (lowercase required)</td>
+      </tr>
+      <tr>
+        <td>Closing Tags</td>
+        <td>Some tags can stay open</td>
+        <td>All tags must be closed</td>
+      </tr>
+      <tr>
+        <td>Strictness</td>
+        <td>Flexible</td>
+        <td>Very strict</td>
+      </tr>
+      <tr>
+        <td>Error Handling</td>
+        <td>Browser auto-corrects</td>
+        <td>Errors break layout</td>
+      </tr>
+    </table>
+  </div>
+
+  
+   <p  id="np">Next Lesson → <a href="28-html-file-naming.html">HTML File Naming</a></p>
+    <p  id="np">Previous Lesson → <a href="26-html-encoding.html">HTML Encoding (Character Sets)</a></p>
+</main>
+
+ <a href="html-tutorial.html" class="floating-back">&larr; Back </a>
+<footer>
+  <div class="footer-bottom">
+    <p>© 2025 ASWCode. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>
